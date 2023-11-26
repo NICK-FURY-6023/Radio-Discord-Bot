@@ -1,4 +1,5 @@
-const { REST, Routes, ActivityType } = require('discord.js');
+const { REST, Routes } = require('discord.js');
+const { ActivityType } = require('discord.js'); // Add this line
 const config = require('../config.json');
 const fs = require('fs');
 const path = require('path');
@@ -52,4 +53,4 @@ function changeActivity(client, message) {
     client.user.setPresence({
         activities: [{ name: message, type: ActivityType.Listening }]
     });
-	    }
+}
